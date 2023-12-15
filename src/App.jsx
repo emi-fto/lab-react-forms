@@ -90,12 +90,12 @@ function App() {
               maxLength={4}
               min={2023}
               max={2030}
-              value={graduationYear} onChange={({ target }) => setGraduationYear(target.value)} />
+              value={graduationYear} onChange={({ target }) => setGraduationYear(parseInt(target.value))} />
           </label>
 
           <label>
             Graduated
-            <input name="graduated" type="checkbox" value={graduated} onChange={({target}) => setGraduated(target.value)}/>
+            <input name="graduated" type="checkbox" checked={graduated} onChange={({target}) => setGraduated(target.checked)}/>
           </label>
 
           <button type="submit">Add Student</button>
